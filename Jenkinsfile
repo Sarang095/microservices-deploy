@@ -8,8 +8,8 @@ pipeline {
 
 
     environment {
-        resgistry = "csag095/vprofileapp"
-        resgistryCredentials = "dockerhub"
+        registry = "csag095/vprofileapp"
+        registryCredentials = "dockerhub"
     }
 	
     stages{
@@ -76,7 +76,7 @@ pipeline {
         stage('Build App Image'){
             steps{
                 script{
-                   dockerImage = docker.build resgistry + ":v$BUILD_NUMBER"
+                   dockerImage = docker.build registry + ":v$BUILD_NUMBER"
                 }
             }
         }
@@ -84,7 +84,7 @@ pipeline {
         stage('Push Image to DockerHub'){
             steps{
                 script{
-                    docker.withRegistry('', resgistryCredentials) {
+                    docker.withRegistry('', registryCredentials) {
                     dockerImage.push("$BUILD_NUMBER")
                     dockerImage.push("latest")
                     }
