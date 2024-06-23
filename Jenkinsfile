@@ -1,7 +1,7 @@
 pipeline {
     
 	agent any
-    	
+
     environment {
         resgistry = "csag095/vprofileapp"
         resgistryCredentials = "dockerhub"
@@ -96,7 +96,7 @@ pipeline {
         stage('Deploy on kubernetes with helm'){
             agent{label 'KOPS'}
             steps{
-                sh 'helm upgrade --install --force vpro-application-stack helm/vprocharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod'
+                sh 'helm upgrade --install --force vpro-application-stack ci-cd-workflow/vprocharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod'
             }
         }
 
