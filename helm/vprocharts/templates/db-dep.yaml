@@ -24,18 +24,15 @@ spec:
             - name: vprodb-port
               containerPort: 3306
           env:
-            - name: MYDQL_ROOT_PASSWORD
+            - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
                   name: my-app-secrets
                   key: dbpass
-      nodeSelector:
-        zone: us-east-2a
       volumes:
         - name: vprodb-data
-          awsElasticBlockStore:
-            volumeID: id
-            fsType: ext4
+          persistentVolumeClaim:
+            claimName: vprodb-pvc
       initContainers:
         - name: sql-executor
           image: busybox:latest
