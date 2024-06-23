@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: vproapp
   labels:
-    app: vprapp
+    app: vproapp
 spec:
   selector:
     matchLabels:
