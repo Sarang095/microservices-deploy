@@ -76,7 +76,7 @@ pipeline {
         stage('Build App Image'){
             steps{
                 script{
-                   dockerImage = docker.build resgistry + "v:$BUILD_NUMBER"
+                   dockerImage = docker.build resgistry + ":v$BUILD_NUMBER"
                 }
             }
         }
@@ -101,7 +101,7 @@ pipeline {
         stage('Deploy on kubernetes with helm'){
             agent{label 'KOPS'}
             steps{
-                sh 'helm upgrade --install --force vpro-application-stack helm/vprocharts --set appimage=${registry}:${BUILD_NUMBER} --namespace prod'
+                sh 'helm upgrade --install --force vpro-application-stack helm/vprocharts --set appimage=${registry}:v${BUILD_NUMBER} --namespace prod'
             }
         }
 
