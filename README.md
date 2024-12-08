@@ -1,5 +1,9 @@
 # CI/CD Pipeline for Application Stack Deployment on Kubernetes Cluster with AWS
 
+## Repository for Kubernetes Manifests
+The Kubernetes manifests for this project:  
+[https://github.com/Sarang095/Kube-AppDep](https://github.com/Sarang095/Kube-AppDep)
+
 ## Overview
 This project demonstrates the deployment of a comprehensive application stack, including RabbitMQ, Memcached, MySQL, and a Java-based application on a Tomcat server, to a **Kubernetes cluster** provisioned using **KOPS** on self-created AWS Infrastructure. The CI/CD pipeline leverages **Jenkins** for continuous integration and **ArgoCD** for GitOps-based continuous deployment, ensuring high availability, scalability, and security.
 
