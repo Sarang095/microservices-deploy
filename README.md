@@ -74,7 +74,8 @@ This project demonstrates the deployment of a comprehensive application stack, i
 ![Screenshot 2024-12-08 234741](https://github.com/user-attachments/assets/fde6411c-e137-400c-a7a1-26ad7fbdd418)
 
 **Kubernets Cluster Status**
-![Screenshot 2024-12-08 234300](https://github.com/user-attachments/assets/ea50dfcf-3fa4-41d7-af59-56416af42b84)
+![Screenshot 2024-12-08 234330](https://github.com/user-attachments/assets/196026c4-cd07-4923-805f-5e8502aafbd6)
+
 
 **Deployed Application**
 ![Screenshot 2024-12-08 234547](https://github.com/user-attachments/assets/993888c0-76b0-4d11-8ed9-246c9e186088)
