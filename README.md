@@ -9,6 +9,7 @@ This project demonstrates the deployment of a comprehensive application stack, i
 - **KOPS**: Provisions complete AWS resources(VPC, Subnets, RTs, IGW, EBS Volumes, ELBs, ASGs, IAM roles, Templates and SGs) for launching K8s Cluster.
 - **Jenkins**: Continuous Integration for build and testing.
 - **ArgoCD**: GitOps-based Continuous Deployment to Kubernetes.
+- **Aqua Security Trivy**: Intermediate docker image scanning for vulnerabilities.
 - **SonarQube**: Code quality analysis with Checkstyle, Surefire, and JaCoCo reports.
 - **MySQL**: Stateful database with **EBS volumes** for persistent storage.
 - **RabbitMQ**: Message queue for asynchronous communication.
@@ -56,3 +57,25 @@ This project demonstrates the deployment of a comprehensive application stack, i
 - **Principle of Least Privilege (PoLP)** enforced at the cluster and container levels to reduce risks.
 - Integrated **SonarQube Scanner** to ensure code adheres to quality gates.
 - Secured database storage with **EBS volumes** and PVCs for persistence.
+
+## Project Snapshots
+**Jenkins Pipeline Execution**
+![Screenshot 2024-12-08 234211](https://github.com/user-attachments/assets/32989a47-527b-4d21-9b6d-a987c1d77a0c)
+
+**ArgoCD Application Status**
+![Screenshot 2024-12-08 234128](https://github.com/user-attachments/assets/66249ac4-85b8-4b0f-84b1-c9a07bdd84ed)
+
+**SonarQube Quality Gates Response**
+![Screenshot 2024-12-08 234150](https://github.com/user-attachments/assets/e0990126-7fcb-4b3c-bef7-6fc56182f7e2)
+
+**SonarQube Analysis Reports**
+![Screenshot 2024-12-08 234911](https://github.com/user-attachments/assets/785eb82f-49e8-4658-a1d5-2e781a9d4074)
+![Screenshot 2024-12-08 234809](https://github.com/user-attachments/assets/eca59c7d-ea4e-4862-badc-5c04a19c1d05)
+![Screenshot 2024-12-08 234741](https://github.com/user-attachments/assets/fde6411c-e137-400c-a7a1-26ad7fbdd418)
+
+**Kubernets Cluster Status**
+![Screenshot 2024-12-08 234300](https://github.com/user-attachments/assets/ea50dfcf-3fa4-41d7-af59-56416af42b84)
+
+**Deployed Application**
+![Screenshot 2024-12-08 234547](https://github.com/user-attachments/assets/993888c0-76b0-4d11-8ed9-246c9e186088)
+![Screenshot 2024-12-08 234431](https://github.com/user-attachments/assets/5c1c1f13-0d33-4fe6-8c86-e41df662b44f)
